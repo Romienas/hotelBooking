@@ -14,7 +14,13 @@ mongoose.Promise = global.Promise
 
 app.use(bodyParser.json())
 
+//set /api to url to all api calls
 app.use('/api', require('./routes/room'))
+
+//handle error messages
+app.use((err, req, res, next) => {
+    res.send(err)
+})
 
 app.listen(port, () => {
     console.log(`App listening at localhost:${port}`)

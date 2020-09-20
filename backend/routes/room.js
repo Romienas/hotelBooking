@@ -23,7 +23,9 @@ router.delete('/removeRoom/:id', (req, res, next) => {
             message: 'Room removed successfully'
         })
     })
-    .catch(next)
+    .catch((err) => {
+        res.status(422).send(err)
+    })
 })
 
 module.exports = router
