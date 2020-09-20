@@ -42,6 +42,10 @@ const roomSchema = new Schema({
         type: String,
         required: [true, 'Room Type is required']
     },
+    price: {
+        type: Number,
+        required: [ true, 'Must add room price per night']
+    },
     sleeps: {
         type: Number,
         require: [true, 'Must set number of quests']

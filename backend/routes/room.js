@@ -14,4 +14,16 @@ router.post('/addRoom', (req, res, next) => {
     .catch(next)
 })
 
+//Delete room from database
+router.delete('/removeRoom/:id', (req, res, next) => {
+    let roomId = req.params.id
+    Rooms.findByIdAndRemove({_id: roomId})
+    .then( () =>{
+        res.send({
+            message: 'Room removed successfully'
+        })
+    })
+    .catch(next)
+})
+
 module.exports = router
