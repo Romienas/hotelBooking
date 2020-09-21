@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./media/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./media/fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+//Global variables
+
+//Global extends
+%mainTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+//Default values
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.admin {
+    display: flex;
+    justify-content: center;
+}
+
+.admin__login {
+    margin-top: 150px;
+}
+
+.admin__login-title {
+    @extend %mainTitle;
+}
