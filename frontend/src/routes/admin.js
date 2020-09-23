@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Input from '../Components/Input'
+import Button from '../Components/Button'
 
 function Admin() {
     const [email, setEmail] = useState('')
@@ -22,6 +23,10 @@ function Admin() {
                     <Input 
                         type='text'
                         clickHandler={(input) => setEmail(input)}
+                    />
+                    <Button 
+                        text='Continue'
+                        clickHandler={() => console.log('sove')}
                     />
                 </div>
             </div>

@@ -1,0 +1,18 @@
+@import '../index.scss';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $buttonColor;
+    color: #ffffff;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    height: 48px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: $buttonHoverColor;
+}
