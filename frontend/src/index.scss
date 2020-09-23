@@ -11,6 +11,7 @@
 
 //Global variables
 $globalColor: #383838;
+$borderColor: #b1b1b1;
 
 //Global extends
 %mainTitle {
@@ -25,6 +26,23 @@ body {
     margin: 0;
     padding: 0;
     color: $globalColor;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: $borderColor;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $borderColor;
+}
+
+::-ms-input-placeholder {  
+    color: $borderColor;
 }
 
 .admin {

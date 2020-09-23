@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Input from '../Components/Input'
 
 function Admin() {
+    const [email, setEmail] = useState('')
     return (
         <div className='admin'>
             <div className='admin__login'>
@@ -15,6 +16,7 @@ function Admin() {
                     </div>
                     <Input 
                         type='text'
+                        clickHandler={(input) => setEmail(input)}
                     />
                 </div>
             </div>
