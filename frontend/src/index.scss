@@ -15,6 +15,8 @@ $borderColor: #b1b1b1;
 $buttonColor: #0071c2;
 $buttonHoverColor: #005c9d;
 
+$borderRadius: 2px;
+
 //Global extends
 %mainTitle {
     font-size: 24px;
@@ -47,6 +49,14 @@ input:focus {
     color: $borderColor;
 }
 
+
+// Global styles
+.displayNone {
+    display: none;
+}
+
+//Styles
+
 .admin {
     display: flex;
     flex-direction: column;
@@ -70,4 +80,42 @@ input:focus {
 
 .admin__login-input-title {
     margin: 20px 0 5px 0;
+}
+
+@keyframes usernameNext {
+    from {
+        opacity: 1;
+        margin-left: 0;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        margin-left: -360px;
+    }
+}
+
+.admin__login-username-next {
+    animation-name: usernameNext;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.admin_login-button {
+    margin: 20px 0;
+}
+
+@keyframes signInAnim {
+    from {
+        opacity: 0;
+        margin-left: 360px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+.admin__login-password {
+    animation-name: signInAnim;
+    animation-duration: 0.5s;
 }
